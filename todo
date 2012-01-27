@@ -1,0 +1,21 @@
+## TODO - I prioordning, typ
+	
+	1.	Kontakta oss
+	
+	2.	Gästbok
+	
+	3.	Sponsordel
+	
+	4.	Filuppladdning
+	
+	5.	Galleri
+	
+	6.	Fixa tutorial/introduktion
+	
+	7.	En SQL-klass så att man kan använda endera MySQL, MySQLi eller SQLite		(galet oprioriterat)
+	
+	8.	En egen session_handler som sparar sessionsdatan i en MySQL-databas ist		(galet oprioriterat)
+	
+## Eventuellt migrera till CodeIgniter, kan vara wtfhax.
+
+kthxbai?

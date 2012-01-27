@@ -1,0 +1,83 @@
++++++++++++++++++++++
+Changelog för XAdmin2
++++++++++++++++++++++
+
+
+	v2.0b4
+	******
+	 - Numera finns ett kontaktformulär inbyggt, anropas med funktionen
+	   printContactForm()
+	 - Kommentarer till nyheter finns nu att aktivera under Inställningar.
+	   Funktioner för att lägga till kommentarer i databasen, skriva ut
+	   kommentarer till en nyhet samt skriva ut ett kommentarsformulär finns
+	   även tillagt. Se /inc/nyheter.php för mer information.
+	 - Helt ny uppdateringsmotor som är tänkt att förenkla uppdateringsprocessen
+	   väsentligt. Detta genom att bl.a. använda samma sida oberoende av vilken
+	   version man uppdaterar ifrån.
+	 - Även en ny installationsmotor har tagits fram för denna version. Detta är
+	   gjort för att förhoppningsvis göra installationsprocessen smidigare, men
+	   också lättare att underhålla i fortsättningen.
+	 - Numera finns det ett verifieringsscript. Om någonting inte skulle fungera
+	   som det ska; gå till /verify.php för att göra en kontroll av alla filer.
+	 - Dokumentationen för XAdmin är nu påbörjad och finns att läsa på
+	   http://xcoders.info/doc
+	   Notera att den inte alls är klar, utan kommer att byggas på när tid och
+	   ork finns.
+	 - CSSen i adminlayouten har även fått sig en liten översyn och torde nu
+	   fungera bättre på olika plattformar och i olika webbläsare.
+	 - Tiden vid matcher har nu ett javascript-tillägg för att göra
+	   tidsangivelsen smidigare och enklare.
+
+
+	v2.0b3
+	******
+	 - Helt ny layout till administrationsdelen, ska förhoppningsvis också
+	   fungera bättre än den tidigare.
+	   Notera dock att denna är fortfarande under testning, vid problem vänligen
+	   använd "Kontakta oss"-länken från admindelen för att skicka ett mail där
+	   ni kan beskriva vad felet är.
+	 - Systemet hanterar även magic_quotes_gpc nu, vilket ska åtgärda de fall
+	   där man inte kunde se t.ex. flaggorna.
+	 - Resultatet vid en match kan nu innehålla 0-or, tidigare var exempelvis
+	   12-0 inte ett godkänt resultat.
+	 - Uppdateringen fungerar både för 2.0b1 och b2, ska heller inte gå att
+	   använda fel uppdateringsfil.
+	 - getNewsItem() med endast den första parametern retunerar nu information
+	   från den senaste nyheten.
+	 - När man skriver en nyhet, kommentar till en medlem/match eller historia
+	   så sparas nu allt man har skrivit (om det är längre än 50 tecken) efter
+	   60 sekunder, och därefter fortlöpande. För att hämta sparad data; använd
+	   livbojen i textredigeraren.
+	 - Som ovan nämnt finns nu även ett kontaktformulär till oss direkt i
+	   adminsystemet så att man på ett enkelt sätt kan nå oss om det är något
+	   man undrar över eller liknande.
+
+	v2.0b2
+	******
+	 - Rensat upp i /ins/index.php, även problemen med anropet av
+	   mysql_real_escape_string() under installationen är åtgärdat.
+	 - Datumet vid uppdateringen av matcherna visas och ändras nu korrekt.
+	 - Möjlighet att lägga till klanens historia är tillagd, anropas med
+	   funktionen getHistory().
+	 - Versionskontroll implementerad; ett meddelande visas på förstasidan när
+	   en uppdatering finns tillgänglig.
+	 - Fixade ett säkerhetshål där datan inte verifierades när man uppdaterade
+	   klannamnet.
+	 - Är XAdmin inte installerat dirigeras man nu om till installationen när
+	   man besöker demosidan.
+	 - Förbättrad funktion för att kontrollera om en användare är inloggad eller
+	   ej.
+	 - Nu går det även att lägga till flaggor i nyheter, spelarinfo,
+	   matchkommentarer samt historia.
+	 - En påminnelse visas nu efter avslutad installation om att /ins/-mappen
+	   bör tas bort för att förhindra ominstallationer.
+	 - Tidigare problem med att å, ä samt ö inte visades i t.ex. nyheter är nu
+	   åtgärdat.
+	 - Optimeringar av funktionerna getNewsItem(), getMemberItem() samt
+	   getMatchItem() är utförda.
+	 - Förbättring av funktionen som hämtar nyheter från XCoders, den ska nu
+	   fungera på fler system än tidigare.
+
+	v2.0b1
+	******
+	 - Första publika versionen
